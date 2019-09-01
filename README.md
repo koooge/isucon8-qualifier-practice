@@ -49,3 +49,16 @@ isucon    1404  4.9  6.5 1030136 66848 ?       Ssl  07:03   0:00 /home/isucon/lo
 isucon    1459  0.5  0.2 116376  3032 pts/0    S    07:03   0:00 -bash
 isucon    1483  0.0  0.1 155360  1872 pts/0    R+   07:03   0:00 ps ux
 ```
+
+h2oからnginxに切り替え
+```
+$ yum check-update
+$ sudo yum update
+$ sudo yum install nginx
+$ sudo systemctl stop h2o
+$ sudo systemctl disable h2o
+$ sudo systemctl start nginx
+$ sudo systemctl enable nginx
+$ sudo reboot
+$ ps ux
+```
