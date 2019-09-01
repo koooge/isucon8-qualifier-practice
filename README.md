@@ -11,3 +11,25 @@ LISTEN      0      128                    *:80                                 *
 LISTEN      0      128                    *:8080                               *:*
 LISTEN      0      128                    *:22                                 *:*
 ```
+
+isuconユーザーが起動しているprocess一覧
+
+```
+$ ps xu
+[isucon@localhost ~]$ ps ux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+isucon     390  0.0  0.0 198392   312 ?        Ss   05:41   0:00 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     449  0.1  0.6 354920  6728 ?        S    05:41   0:05 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     450  0.0  0.0 319236   180 ?        S    05:41   0:03 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     451  0.0  0.1 319216  1976 ?        S    05:41   0:03 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     453  0.0  0.0 318788   232 ?        S    05:41   0:02 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     454  0.0 38.7 752284 393536 ?       S    05:41   0:03 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     455  0.0  0.0 318804   296 ?        S    05:41   0:03 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     456  0.0  0.0 319004   308 ?        S    05:41   0:03 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     458  0.0  0.1 346408  1872 ?        S    05:41   0:04 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     459  0.0  0.0 327188   260 ?        S    05:41   0:02 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon     460  0.0 19.6 751680 199516 ?       S    05:41   0:03 /home/isucon/torb/webapp/perl/local/bin/plackup
+isucon    3441  0.0  0.2 116624  2232 pts/1    S    05:43   0:00 -bash
+isucon    3829  0.0  0.3  37008  3820 ?        Sl   06:26   0:00 /usr/sbin/h2o -c /etc/h2o/h2o.conf
+isucon    4338  0.0  0.1 155360  1876 pts/1    R+   06:55   0:00 ps ux
+```
