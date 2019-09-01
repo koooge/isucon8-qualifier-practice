@@ -61,4 +61,9 @@ $ sudo systemctl start nginx
 $ sudo systemctl enable nginx
 $ sudo reboot
 $ ps ux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+isucon    1415  0.0  8.0 1034128 81824 ?       Ssl  07:09   0:01 /home/isucon/local/node/bin/node /home/isucon/torb/webapp/nodejs/node_modules/.bin/ts-node index.ts
+isucon    1462  0.0  0.3 116720  3532 pts/0    S    07:09   0:01 -bash
+isucon    2756  0.0  0.3 125496  3136 ?        S    07:47   0:00 nginx: worker process
+isucon    3222  0.0  0.1 155360  1876 pts/0    R+   07:58   0:00 ps ux
 ```
