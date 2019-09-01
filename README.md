@@ -33,3 +33,19 @@ isucon    3441  0.0  0.2 116624  2232 pts/1    S    05:43   0:00 -bash
 isucon    3829  0.0  0.3  37008  3820 ?        Sl   06:26   0:00 /usr/sbin/h2o -c /etc/h2o/h2o.conf
 isucon    4338  0.0  0.1 155360  1876 pts/1    R+   06:55   0:00 ps ux
 ```
+
+nodejsの参考実装に切り替え
+```
+$ sudo systemctl stop torb.perl
+$ sudo systemctl disable torb.perl
+$ sudo systemctl start torb.nodejs
+$ sudo systemctl enable torb.nodejs
+$ sudo reboot
+$ ps ux
+[isucon@localhost ~]$ ps ux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+isucon    1034  0.0  0.3  37008  3816 ?        Sl   07:03   0:00 /usr/sbin/h2o -c /etc/h2o/h2o.conf
+isucon    1404  4.9  6.5 1030136 66848 ?       Ssl  07:03   0:00 /home/isucon/local/node/bin/node /home/isucon/torb/webapp/nodejs/node_modules/.bin/ts-node index.ts
+isucon    1459  0.5  0.2 116376  3032 pts/0    S    07:03   0:00 -bash
+isucon    1483  0.0  0.1 155360  1872 pts/0    R+   07:03   0:00 ps ux
+```
